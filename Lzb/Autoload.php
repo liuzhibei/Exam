@@ -1,6 +1,6 @@
 <?php
 
-namespace Lzb\Autoload;
+namespace Lzb;
 
 
 class Autoload

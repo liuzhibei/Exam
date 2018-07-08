@@ -2,7 +2,7 @@
 
 define('BASE_DIR', __DIR__);
 require BASE_DIR . '/Lzb/Autoload.php';
-spl_autoload_register('Lzb\\Autoload\\Autoload::autoload');
+spl_autoload_register('Lzb\\Autoload::autoload');
 
 //App\Controller\Controller::testController();
 
@@ -16,3 +16,9 @@ spl_autoload_register('Lzb\\Autoload\\Autoload::autoload');
  * 2. 返回字符串中的最大回文子串。
  */
 //echo App\Controller\Algorithm\AlgorithmController::zuidahuiwenzichuan('caba');
+
+/*
+ *
+ */
+//$database = \Lzb\Factory::getDatabase();
+//echo $database->getHostUserPassword();
