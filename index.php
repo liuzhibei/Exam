@@ -4,8 +4,6 @@ define('BASE_DIR', __DIR__);
 require BASE_DIR . '/Lzb/Autoload.php';
 spl_autoload_register('Lzb\\Autoload::autoload');
 
-//App\Controller\Controller::testController();
-
 /*
  *1. 整数反转题目，三十二位的有符号整数，输出反转
  *后的结果，如果果反转后溢出，则输出0。
@@ -18,7 +16,18 @@ spl_autoload_register('Lzb\\Autoload::autoload');
 //echo App\Controller\Algorithm\AlgorithmController::zuidahuiwenzichuan('caba');
 
 /*
- *
+ * 3. 工厂模式+单例模式
  */
 //$database = \Lzb\Factory::getDatabase();
 //echo $database->getHostUserPassword();
+
+/*
+ * 4. 排序算法
+ */
+//$arr = range(1, 50, 3);
+//shuffle($arr);
+//print_r($arr);
+//var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSort($arr));
+//var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSortTwo($arr));
+//var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSortThree($arr));
+//var_dump(\App\Controller\Algorithm\AlgorithmSorController::quickSort($arr, 0, 16));
