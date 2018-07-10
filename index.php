@@ -22,11 +22,17 @@ require_once BASE_DIR . '/Lzb/Lzb.php';
  * +适配器模式（Lzb\Database\Mysqli类和Lzb\Database\Pdo类）
  * +注册数模式（Lzb\Factory类中使用与工厂模式合并）
  * +数据对象映射模式（App\Orm\User类)
+ * +迭代器模式（App\Orm\UserAll类)
  */
 
 $user = new \App\Orm\User(1);
 $user->name = 'bbb';
 var_dump($user);
+
+//$users = new \App\Orm\UserAll();
+//foreach ($users as $user) {
+//    echo $user->id, $user->name , '<br/>';
+//}
 
 /*
  * 4. 排序算法
@@ -39,3 +45,6 @@ var_dump($user);
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSortThree($arr));
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::quickSort($arr, 0, 16));
 
+/*
+ * 5.
+ */
