@@ -1,8 +1,9 @@
 <?php
 
 define('BASE_DIR', __DIR__);
-require BASE_DIR . '/Lzb/Autoload.php';
+require_once BASE_DIR . '/Lzb/Autoload.php';
 spl_autoload_register('Lzb\\Autoload::autoload');
+require_once BASE_DIR . '/Lzb/Lzb.php';
 
 /*
  *1. 整数反转题目，三十二位的有符号整数，输出反转
@@ -16,10 +17,16 @@ spl_autoload_register('Lzb\\Autoload::autoload');
 //echo App\Controller\Algorithm\AlgorithmController::zuidahuiwenzichuan('caba');
 
 /*
- * 3. 工厂模式+单例模式
+ * 3. 工厂模式(Lzb\Factory类中有工厂方法）
+ * +单例模式（暂时没有了单例模式）
+ * +适配器模式（Lzb\Database\Mysqli类和Lzb\Database\Pdo类）
+ * +注册数模式（Lzb\Factory类中使用与工厂模式合并）
+ * +数据对象映射模式（App\Orm\User类)
  */
-//$database = \Lzb\Factory::getDatabase();
-//echo $database->getHostUserPassword();
+
+$user = new \App\Orm\User(1);
+$user->name = 'bbb';
+var_dump($user);
 
 /*
  * 4. 排序算法
@@ -31,3 +38,4 @@ spl_autoload_register('Lzb\\Autoload::autoload');
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSortTwo($arr));
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSortThree($arr));
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::quickSort($arr, 0, 16));
+
