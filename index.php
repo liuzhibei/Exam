@@ -1,7 +1,7 @@
 <?php
 
 define('BASE_DIR', __DIR__);
-require_once BASE_DIR . '/Lzb/Autoload.php';
+include_once BASE_DIR . '/Lzb/Autoload.php';
 spl_autoload_register('Lzb\\Autoload::autoload');
 require_once BASE_DIR . '/Lzb/Lzb.php';
 
@@ -25,9 +25,9 @@ require_once BASE_DIR . '/Lzb/Lzb.php';
  * +迭代器模式（App\Orm\UserAll类)
  */
 
-$user = new \App\Orm\User(1);
-$user->name = 'bbb';
-var_dump($user);
+//$user = new \App\Orm\User(1);
+//$user->name = 'bbb';
+//var_dump($user);
 
 //$users = new \App\Orm\UserAll();
 //foreach ($users as $user) {
@@ -40,11 +40,19 @@ var_dump($user);
 //$arr = range(1, 50, 3);
 //shuffle($arr);
 //print_r($arr);
+//echo '<pre>';
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSort($arr));
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSortTwo($arr));
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::bubbleSortThree($arr));
 //var_dump(\App\Controller\Algorithm\AlgorithmSorController::quickSort($arr, 0, 16));
 
 /*
- * 5.
+ * 5.数组函数(数组如果定义重复键值，后面的会覆盖前面的）
  */
+echo '<pre>';
+//\App\Controller\PhpFunction\ArrayFunction::array_count_values();
+
+/*
+ * 6. 字符串函数
+ */
+\App\Controller\PhpFunction\StringFunction::chr();
