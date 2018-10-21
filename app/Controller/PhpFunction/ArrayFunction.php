@@ -90,4 +90,74 @@ class ArrayFunction
          */
         var_dump(array_count_values($a));
     }
+
+    /**
+     * param callback
+     * param array ...
+     * return array
+     */
+    public static function array_map()
+    {
+        $arr = array('kdfj', 'kdjfdkf', 'fkjdk', 'kfjdkf');
+        $arr2 = array('kdfj', 'kdjfd');
+        //数组最后元素个数不变，没有返回就是null
+        var_dump(array_map(function ($a, $b) {
+            if ($a == $b) return $a . $b;
+        }, $arr, $arr2));
+    }
+
+    /**
+     * param arr array
+     * param [searchvalue]
+     * param strick false
+     */
+    public static function array_keys()
+    {
+        $arr = [
+            'fkdj',
+            'fkdjf',
+            'djfk',
+            'fkdj',
+            'fkdj',
+        ];
+        var_dump(array_keys($arr, 'fkdj'));
+    }
+
+
+    public static function array_values()
+    {
+        $arr = [
+            'a',
+            'b',
+            'c',
+            'd',
+            'a',
+            'b'
+        ];
+        var_dump(array_values($arr));
+    }
+
+    /**
+     * param key
+     * param array
+     * return bool
+     */
+    public static function array_key_exists()
+    {
+        $arr = [
+            'fdj',
+            'dfkj',
+            'dkf',
+        ];
+        var_dump(array_key_exists('4', $arr));
+    }
+
+    public static function array_filter()
+    {
+        $arr = array('dkfd', 'kfdjskf', 'fkdj', 'dksjf', 'true', 'true');
+        var_dump(array_filter($arr, function ($a) {
+            if ($a == 'true') return false;
+            return true;
+        }));
+    }
 }

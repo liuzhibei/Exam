@@ -50,9 +50,9 @@ require_once BASE_DIR . '/Lzb/Lzb.php';
  * 5.数组函数(数组如果定义重复键值，后面的会覆盖前面的）
  */
 echo '<pre>';
-//\App\Controller\PhpFunction\ArrayFunction::array_count_values();
+\App\Controller\PhpFunction\ArrayFunction::array_map();
 
 /*
  * 6. 字符串函数
  */
-\App\Controller\PhpFunction\StringFunction::chr();
+//\App\Controller\PhpFunction\StringFunction::substr();
