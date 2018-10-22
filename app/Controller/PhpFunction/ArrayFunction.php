@@ -160,4 +160,56 @@ class ArrayFunction
             return true;
         }));
     }
+
+    /**
+     * param array
+     * param sort_rule
+     */
+    public static function array_unique()
+    {
+        $arr = array('a' => 'red', 'b', 'red', 'c', 'b' => 'red');
+        var_dump(array_unique($arr));
+    }
+
+    /**
+     * param $array, $array, $array
+     * 与+区别，本函数是数组重新排序，字符串后面覆盖前面，+是无论数字/字符串键值都是放弃后面的重复键值
+     */
+    public static function array_merge()
+    {
+        $a = array('a', 'b', 'c', 'aa' => 'aa', 'bb' => 'bb');
+        $b = array('e', 'f', 'g', 'aa' => 'dd', 'bb' => 'ee');
+        var_dump(array_merge($a, $b));
+        var_dump($a+$b);
+    }
+
+    public static function array_flip()
+    {
+        $a = array('a' => 22, 'b' => 22, 'c' => 'cc', 'd' => 'cc');
+        var_dump(array_flip($a));
+    }
+
+    /**
+     * 与array_merge相似无论是数字还是字符键都是后面覆盖前面与+完全相反
+     */
+    public static function array_replace()
+    {
+        $a = array('aa' => 'aa', 'bb' => 'bb', 'cc', 'dd');
+        $b = array('aa' => 'ee', 'bb' => 'rr', 'ff', 'gg');
+        var_dump(array_replace($a, $b));
+    }
+
+    /**
+     * param $needle
+     * param $array
+     * param [$strict]
+     * reutn bool|mix
+     * 如果想要返回所有的对应键需要用array_keys（）本函数只会返回第一个匹配的键
+     */
+    public static function array_search()
+    {
+        $a = array('df', 'fjdk', 'dfkjdk');
+        var_dump(array_search('df', $a));
+        var_dump(array_search('jfdkfkfjdkf', $a));
+    }
 }

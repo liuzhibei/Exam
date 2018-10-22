@@ -131,4 +131,21 @@ class StringFunction
         $str = 'fdsfjdsfj';
         var_dump(substr($str, -4, 2));
     }
+
+    public static function strReplace()
+    {
+        $search = ['a', 'b', 'c', 'd', 'e'];
+        $replace = ['11', '22', '33', '44', '55'];
+        $arr = ['abcdefg', 'abcdefg', 'abcdefg'];
+        var_dump(str_replace($search, $replace, $arr));
+    }
+
+    /**
+     * 了解%字母
+     * %n\$字母前面是占位符
+     */
+    public static function sprintf()
+    {
+        var_dump(sprintf("%1\$fsfd%1\$ofkj%2\$e", 1233, 232));
+    }
 }
