@@ -148,4 +148,14 @@ class StringFunction
     {
         var_dump(sprintf("%1\$fsfd%1\$ofkj%2\$e", 1233, 232));
     }
+
+    /**
+     * @desc 此函数用于序列化数据为数据流可以存储在任何地方
+     */
+    public static function serialize()
+    {
+        var_dump(serialize(['a'=>'1', 'b'=> 2]));
+    }
+
+
 }

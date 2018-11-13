@@ -4,7 +4,7 @@ define('BASE_DIR', __DIR__);
 include_once BASE_DIR . '/Lzb/Autoload.php';
 spl_autoload_register('Lzb\\Autoload::autoload');
 require_once BASE_DIR . '/Lzb/Lzb.php';
-
+echo '<pre>';
 /*
  *1. 整数反转题目，三十二位的有符号整数，输出反转
  *后的结果，如果果反转后溢出，则输出0。
@@ -49,10 +49,17 @@ require_once BASE_DIR . '/Lzb/Lzb.php';
 /*
  * 5.数组函数(数组如果定义重复键值，后面的会覆盖前面的）
  */
-echo '<pre>';
+
 //\App\Controller\PhpFunction\ArrayFunction::array_search();
 
 /*
  * 6. 字符串函数
  */
-\App\Controller\PhpFunction\StringFunction::sprintf();
+//\App\Controller\PhpFunction\StringFunction::serialize();
+
+/**
+ * 7. 链表
+ */
+\App\Controller\LinkList\LinkList::index();
+
+
