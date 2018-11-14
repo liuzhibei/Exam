@@ -60,6 +60,6 @@ echo '<pre>';
 /**
  * 7. 链表
  */
-\App\Controller\LinkList\LinkList::index();
+\App\Controller\LinkList\LinkList::reverse();
 
 

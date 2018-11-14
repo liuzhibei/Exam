@@ -30,7 +30,7 @@ class LinkList
         $a = [];
         $pointer = $this->head;
         while ($pointer->next != null) {
-            $a[] = $this->head->next->data;
+            $a[] = $pointer->next->data;
             $pointer = $pointer->next;
         }
         var_dump($a);
