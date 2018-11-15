@@ -60,6 +60,12 @@ echo '<pre>';
 /**
  * 7. 链表
  */
-\App\Controller\LinkList\LinkList::reverse();
+//\App\Controller\LinkList\LinkList::reverse();
+
+/**
+ * 8. 递归
+ */
+$res = \App\Controller\Algorithm\AlgorithmRecursionController::upstairs(3);
+var_dump($res);
 
 
