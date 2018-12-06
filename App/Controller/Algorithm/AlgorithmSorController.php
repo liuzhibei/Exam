@@ -182,17 +182,13 @@ class AlgorithmSorController
     /*
      * 快速排序
      */
-    public static function quickSort ($arr) {
-
-    }
-    public static function quickSort2(&$arr, $low, $high)
+    public static function quickSort(&$arr, $low, $high)
     {
-        if ($low < $high) {
+        if (($high - $low) > 0 && $low < $high) {
             $middle = self::partision($arr, $low, $high);
             self::quickSort($arr, $low, $middle-1);
             self::quickSort($arr, $middle+1, $high);
         }
-        return $arr;
     }
 
     public static function partision(&$arr, $low, $high) {
@@ -210,5 +206,37 @@ class AlgorithmSorController
         $tmp = $arr[$i];
         $arr[$i] = $arr[$j];
         $arr[$j] = $tmp;
+    }
+
+    /*
+     * 归并排序
+     */
+    public static function mergeSort ($arr)
+    {
+        if (!is_array($arr)) {
+            return false;
+        }
+
+        $count = count($arr);
+        if ($count <= 1) {
+            return $arr;
+        }
+        $middle = floor($count / 2);
+        $left = self::mergeSort(array_slice($arr, 0, $middle));
+        $right = self::mergeSort(array_slice($arr, $middle));
+        return self::merge($left, $right);
+    }
+
+    public static function merge ($left, $right)
+    {
+        $result = [];
+        while (count($left) > 0 && count($right) > 0) {
+            if ($left[0] <= $right[0]) {
+                $result[] = array_shift($left);
+            } else {
+                $result[] = array_shift($right);
+            }
+        }
+        return array_merge($result, $left, $right);
     }
 }

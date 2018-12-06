@@ -65,7 +65,15 @@ echo '<pre>';
 /**
  * 8. 递归
  */
-$res = \App\Controller\Algorithm\AlgorithmRecursionController::upstairs(3);
-var_dump($res);
-
-
+//$res = \App\Controller\Algorithm\AlgorithmRecursionController::upstairs(3);
+//var_dump($res);
+//$repeat = [];
+//while (count($all) > 0) {
+//   $item = array_pop($all);
+//   if (!in_array($item, $ok)) {
+//       $repeat[] = $item;
+//   }
+//}
+$a = [43,545,42,23,4,23,4,2,1,53,34,344,32,323,32432,234,34,34,3,434,4,34];
+\App\Controller\Algorithm\AlgorithmSorController::quickSort($a, 0, 21);
+var_dump($a);
